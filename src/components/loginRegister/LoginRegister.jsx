@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import actionLogin from "../../redux/actions/actionLogin";
 import "./loginRegister.css";
 import Register from "./Register";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import axios from "axios";
 
@@ -14,13 +14,13 @@ const LoginRegister = () => {
 
   const [userEmail, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [container, setContainer] = useState("container");
+  const [container, setContainer] = useState("container_login");
 
   let singUp = () => {
-    setContainer(" container right-panel-active ");
+    setContainer("container_login right-panel-active ");
   };
   let signIn = () => {
-    setContainer(" container ");
+    setContainer("container_login");
   };
 
   async function handleLogin(e) {
@@ -38,12 +38,15 @@ const LoginRegister = () => {
   }
   return (
     <div className="center-container">
-      <div className={container} id="container">
+      <div className={container} id="container_login">
         <div className="form-container sign-up-container">
           <Register></Register>
         </div>
         <div className="form-container sign-in-container">
-          <form className="loginForm" onSubmit={(e) => handleLogin(e)}>
+          <form
+            className="loginForm d-flex flex-column align-items-center"
+            onSubmit={(e) => handleLogin(e)}
+          >
             <h1 id="inciar-sesion">Iniciar sesion</h1>
             <input
               type="text"
