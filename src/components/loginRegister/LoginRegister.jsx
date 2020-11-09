@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import actionLogin from "../../redux/actions/actionLogin";
 import "./loginRegister.css";
 import Register from "./Register";
