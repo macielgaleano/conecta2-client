@@ -95,7 +95,7 @@ export default function Navbar() {
     <div className={classes.root}>
       <CssBaseline theme={theme} />
       <AppBar
-        style={{ background: "#2E3B55" }}
+        style={{ background: "#" }}
         position="fixed"
         theme={theme}
         className={clsx(classes.appBar, {
