@@ -31,6 +31,7 @@
      * Basic stick and stay structure
      */
 .hero {
+  width: 120%;
   padding-top: 140px;
   position: relative;
   transition: padding 0.5s ease-out;
@@ -176,9 +177,6 @@
   z-index: 4000;
 }
 
-/*
-     * Not required
-     */
 img {
   height: auto;
   max-width: 100%;
