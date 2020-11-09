@@ -2,20 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { combineReducers, createStore } from "redux";
 import { Provider } from "react-redux";
-import userReducer from "./redux/reducers/userReducer";
-
-const rootReducer = combineReducers({
-  userReducer,
-});
-const store = createStore(userReducer);
+import { store, persistor } from "./redux/configureStore";
+import { PersistGate } from "redux-persist/integration/react";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </PersistGate>
+  </Provider>,
   document.getElementById("root")
 );

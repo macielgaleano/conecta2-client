@@ -17,7 +17,6 @@ body {
 
 h1 {
   font-weight: bold;
-  margin: 0;
 }
 
 h2 {
@@ -44,6 +43,7 @@ a {
 }
 
 button {
+  margin-top: 20px;
   border-radius: 20px;
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
@@ -76,7 +76,6 @@ form {
   overflow: overlay;
   flex-direction: column;
   padding: 0 50px;
-  height: 100%;
   text-align: center;
 }
 
@@ -159,6 +158,12 @@ input {
   transform: translateX(-100%);
 }
 
+#registrationForm {
+  padding-top: 50px;
+}
+
+.loginForm {
+}
 .center-container {
   margin-top: 100px;
   display: flex;
